@@ -2,6 +2,8 @@
 #include "catch.hpp"
 //write include statement for dna header
 
+#include "dna_hamming.h"
+
 TEST_CASE("Test configuration setup") 
 {
 	REQUIRE(true == true);
@@ -10,3 +12,9 @@ TEST_CASE("Test configuration setup")
 /*
 
 */
+
+
+TEST_CASE("Test dna function")
+{
+	REQUIRE(get_dna_hamming_distance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT") == 7);
+}
