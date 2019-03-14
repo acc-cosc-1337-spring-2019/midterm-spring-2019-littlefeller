@@ -2,7 +2,8 @@
 #include "catch.hpp"
 
 //write include statement for roll header
-
+#include "roll.h"
+#include<string>
 
 /*
 Write a test case to assert that retrieving the result from a roll before
@@ -12,6 +13,7 @@ Must roll first!
 */
 
 
+ 
 
 
 
@@ -24,3 +26,22 @@ Point
 
 (Loop at least 20 times and create an assert in the loop.)
 */
+
+
+
+TEST_CASE("Test valid roll results")
+{
+
+	Die d1;
+	Die d2;
+	Roll r1(d1, d2);
+
+	for (int i = 0; i < 20; i++)
+	{
+		r1.roll();
+		std::string str = r1.result();
+
+		REQUIRE(str == "Craps");
+	}
+
+}
