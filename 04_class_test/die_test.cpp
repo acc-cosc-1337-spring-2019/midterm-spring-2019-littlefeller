@@ -21,11 +21,9 @@ TEST_CASE("Test rolls")
 	{
 		die1.roll();
 
-		int value = die1.rolled_value();
+		REQUIRE(die1.rolled_value() > 0);
+		REQUIRE(die1.rolled_value() < 7);
 
-		REQUIRE(value > 0);
-		REQUIRE(value < 7);
-		
 	}
 
 }
