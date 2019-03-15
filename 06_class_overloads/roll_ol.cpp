@@ -1,4 +1,3 @@
-#include "roll.h"
 #include "roll_ol.h"
 
 //roll class implementation
@@ -15,7 +14,11 @@ void Roll::roll()
 
 void Roll::roll(Die & d1, Die & d2)
 {
+	die1.roll();
+	die1_roll_value = die1.rolled_value();
 
+	die2.roll();
+	die2_roll_value = die2.rolled_value();
 }
 
 string Roll::result()

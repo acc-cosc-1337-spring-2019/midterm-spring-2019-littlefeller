@@ -42,6 +42,8 @@ TEST_CASE("Test valid roll results")
 		std::string str = r1.result();
 
 		REQUIRE(str == "Craps");
+
+
 	}
 
 }
