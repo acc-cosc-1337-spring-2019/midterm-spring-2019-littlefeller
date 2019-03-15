@@ -1,5 +1,6 @@
 #include "dna_consensus.h"
 #include<string>
+#include<vector>
 
  std::string get_profile(std::vector<std::string> dna, int turn)
 {
@@ -52,3 +53,16 @@
 
 	return 0;
 }
+
+ std::string get_consensus(std::string con, std::vector<std::string> vec)
+ {
+	 for (int i = 0; con.length() < 8; i++)
+	 {
+
+		 std::string item = get_profile(vec, i);
+
+		 con += item;
+
+	 }
+	 return con;
+ }

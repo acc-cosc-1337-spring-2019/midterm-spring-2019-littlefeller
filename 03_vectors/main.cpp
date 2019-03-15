@@ -12,17 +12,10 @@ int main()
 	std::vector<std::string> vect{ "ATCCAGCT", "GGGCAACT", "ATGGATCT", "AAGCAACC", "TTGGAACT", "ATGCCATT", "ATGGCACT"};
 
 	std::string consensus;
+	
+	std::string cons1 = get_consensus(consensus, vect);
 
-	for (int i=0; consensus.length() < 8; i++)
-	{
-
-		std::string item = get_profile(vect, i);
-
-		consensus += item;
-
-	}
-
-	std::cout << consensus;
+	std::cout << cons1;
 
 	return 0;
 }

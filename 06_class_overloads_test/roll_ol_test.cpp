@@ -20,10 +20,25 @@ TEST_CASE("Test overloaded functions")
 
 	for (int i = 0; i < 20; i++)
 	{
-		r1.roll();
+		r1.roll(d1, d2);
 		std::string str = r1.result();
+		if (str == "Craps")
+		{
+			REQUIRE(str == "Craps");
+		}
+		else if (str == "Points")
+		{
+			REQUIRE(str == "Points");
+		}
+		else if (str == "Natural")
+		{
+			REQUIRE(str == "Natural");
+		}
+		else
+		{
+			REQUIRE(false == true);
+		}
 
-		REQUIRE(str == "Craps");
 	}
 
 }

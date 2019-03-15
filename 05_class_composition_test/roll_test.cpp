@@ -40,9 +40,22 @@ TEST_CASE("Test valid roll results")
 	{
 		r1.roll();
 		std::string str = r1.result();
-
-		REQUIRE(str == "Craps");
-
+		if (str == "Craps")
+		{
+			REQUIRE(str == "Craps");
+		}
+		else if (str == "Points")
+		{
+			REQUIRE(str == "Points");
+		}
+		else if (str == "Natural")
+		{
+			REQUIRE(str == "Natural");
+		}
+		else
+		{
+			REQUIRE(false == true);
+		}
 
 	}
 
