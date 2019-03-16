@@ -11,6 +11,7 @@ int main()
 	Die d2;
 
 	Roll r1(d1, d2);
+	r1.roll();
 
 	output_both_values(r1);
 

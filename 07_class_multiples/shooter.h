@@ -1,5 +1,10 @@
 //class Shooter interface
 
+#ifndef SHOOTER_H
+#define SHOOTER_H
+
+
+
 #include "die.h"
 #include "roll.h"
 
@@ -15,3 +20,5 @@ private:
 
 
 };
+
+#endif // !SHOOTER_H

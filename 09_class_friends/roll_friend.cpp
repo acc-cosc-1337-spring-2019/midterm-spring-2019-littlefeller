@@ -43,7 +43,11 @@ int Roll::value_2()
 
 void output_both_values(Roll& r1)
 {
-	std::cout << r1.die1_roll_value << "\n" << r1.die2_roll_value;
+
+	int v1 = r1.value_1();
+	int v2 = r1.value_2();
+
+	std::cout << v1 << "\nnext\n" << v2;
 }
 
 // **********************
